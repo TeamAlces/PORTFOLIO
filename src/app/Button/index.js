@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
+import Ink from 'react-ink';
 
 const sizes = {
   desktop: 992,
@@ -37,6 +38,7 @@ const Name = styled.a`
   padding: 0.5em 0;
   display: inline-block;
   width: 175px;
+  position: relative;
 
   ${props => props.Ruben && css`
     background: #158FB2;
@@ -53,9 +55,33 @@ export default class NameList extends Component {
   render() {
     return (
       <List horizontal>
-        <li><Name Ruben>Ruben</Name></li>
-        <li><Name Veronika>Veronika</Name></li>
-        <li><Name Petter>Petter</Name></li>
+        <li>
+          <Name Ruben>
+            Ruben
+            <Ink 
+              duration={1400}
+              radius={800}
+            />
+          </Name>
+        </li>
+        <li>
+          <Name Veronika>
+            Veronika
+            <Ink 
+              duration={1400}
+              radius={800}
+            />
+          </Name>
+        </li>
+        <li>
+          <Name Petter>
+            Petter
+            <Ink 
+              duration={1400}
+              radius={800}
+            />
+          </Name>
+        </li>
       </List>
     );
   }
